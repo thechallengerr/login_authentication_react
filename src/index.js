@@ -10,25 +10,28 @@ function formatName(user) {
 }
 
 const user = {
-  firstName: 'Hoang',
-  lastName: 'Nguyen'
+  firstName: 'Bống',
+  lastName: 'Béo'
 };
 
 
-const element = (
-  <div>
-    <h1>
-    Hello, {formatName(user)}! Welcome to React
-    </h1>
-    <img srcSet={logo} className='user'></img>
-  </div>
-);
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello, {formatName(user)}</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(element, document.getElementById('root'));
+}
+setInterval(tick, 1000);
 
 
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+
+// ReactDOM.render(
+//   element,
+//   document.getElementById('root')
+// );
 
 
 // If you want to start measuring performance in your app, pass a function
